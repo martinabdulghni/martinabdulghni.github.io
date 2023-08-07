@@ -1,233 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- PROPERTIES -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="profile" href="https://gmpg.org/xfn/11">
-        <title>Martin Abdulghni - Home page</title>
-        <meta name="description" content="Martin Abdulghni is a Full-stack developer with over 4 years of experience in web- and app development">
-        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-        <link rel="canonical" href="https://www.navcite.com/kontakt/">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Martin Abdulghni - Home page">
-        <meta property="og:description" content="Martin Abdulghni is a Full-stack developer with over 4 years of experience in web- and app development">
-        <meta property="og:url" content="https://martinabdulghni.com/">
+        <meta name="description" content="Martin Abdulghni - Full-Stack Developer Portfolio">
+        <meta name="robots" content="follow, index">
+        <title>Martin Abdulghni - Full-Stack Developer Portfolio</title>
+        <link rel="canonical" href="https://www.martinabdulghni.com">
+        
+        <!-- Open Graph (OG) Meta Tags -->
+        <meta property="og:title" content="Martin Abdulghni - Full-Stack Developer Portfolio">
+        <meta property="og:description" content="Explore the projects and expertise of Martin Abdulghni, a seasoned Full-Stack Developer with over 4 years of experience in web and app development.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.martinabdulghni.com">
+        <meta property="og:image" content="https://martinabdulghni.com/imgs/martin-abdulghni-og.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
         <meta property="og:site_name" content="Martin Abdulghni">
-        <meta property="og:image" content="https://martinabdulghni.com/imgs/martin%20abdulghni%20-1.JPG">
-        <meta property="og:image:secure_url" content="https://martinabdulghni.com/imgs/martin%20abdulghni%20-1.JPG">
-        <meta property="og:image:type" content="image/jpeg">
-        <meta property="og:image:alt" content="martinabdulghni">
-        <meta property="article:published_time" content="2022-04-09T10:50:03+02:00">
-        <meta property="article:modified_time" content="2022-10-14T05:52:16+02:00">
+        <meta property="article:published_time" content="" id="published-time">
+        <meta property="article:modified_time" content="" id="modified-time">
+   
+        
+        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Martin Abdulghni - Home page">
-        <meta name="twitter:description" content="Martin Abdulghni is a Full-stack developer with over 4 years of experience in web- and app development">
-        <meta property="twitter:image" content="https://martinabdulghni.com/imgs/martin%20abdulghni%20-1.JPG">
-        <meta name="twitter:label1" content="Time to read">
-        <meta name="twitter:data1" content="2 minutes">
+        <meta name="twitter:title" content="Martin Abdulghni - Full-Stack Developer Portfolio">
+        <meta name="twitter:description" content="Explore the projects and expertise of Martin Abdulghni, a seasoned Full-Stack Developer.">
+        <meta name="twitter:image" content="https://martinabdulghni.com/imgs/martin-abdulghni-twitter.jpg">
+        
+        <!-- Facebook App ID -->
         <meta property="fb:app_id" content="509379787696211">
+        
+        <!-- Author and Language -->
         <meta name="author" content="Martin Abdulghni">
+        <meta http-equiv="Content-Language" content="en">
         
-        
+        <!-- Stylesheets and Favicon -->
         <link rel="stylesheet" href="./style/style.css">
-        <link rel="icon" type="image/x-icon" href="./imgs/icon.png">
+        <link rel="icon" type="image/x-icon" href="https://martinabdulghni.com/imgs/icon.png">
     </head>
+    <script>
+        // Get the current date and time in ISO format
+        const currentDate = new Date().toISOString();
+        
+        // Set the content attributes of the meta tags to the current date and time
+        document.getElementById("published-time").content = currentDate;
+        document.getElementById("modified-time").content = currentDate;
+    </script>
+    
     <body>
-        <div class='cursor'>
-            <div class='cursor_point'></div>
-            <div class='cursor_outer'></div>
+        <!-- Cursor -->
+        <div class="cursor">
+            <div class="cursor_point"></div>
+            <div class="cursor_outer"></div>
         </div>
-        <div class='portfolio'>
-            <div class='portfolio_home'>
-                <div style='position: fixed; z-index: -99; width: 2320px;
-                    height: 180%; left: 0;top: -38%;'>
-                </div>
-                <div class='portfolio_home__header'>
-                    <div class='hamburger trigger'>
-                        <a target="_blank"
-                            href="https://www.linkedin.com/in/martinabdulghni/"
-                            target="_"><img src="./imgs/inyellow.png" alt=""></a>
-                        <a target="_blank" href="https://github.com/martinabdulghni"><img
-                                src="./imgs/gityellow.png" alt=""></a>
-                        <a target="_blank" href="https://twitter.com/moveeex"><img
-                                src="./imgs/twitteryellow.png" alt=""></a>
-                        <a target="_blank" href="mailto:me@martinabdulghni.com"><img
-                                src="./imgs/mailyellow.png" alt=""></a>
+    
+        <!-- Portfolio Section -->
+        <div class="portfolio">
+            <div class="portfolio_home">
+                <div style="position: fixed; z-index: -99; width: 2320px; height: 180%; left: 0; top: -38%;"></div>
+    
+                <!-- Header -->
+                <div class="portfolio_home__header">
+                    <div class="hamburger trigger">
+                        <a target="_blank" href="https://www.linkedin.com/in/martinabdulghni/" rel="noopener noreferrer">
+                            <img src="./imgs/inyellow.png" alt="LinkedIn">
+                        </a>
+                        <a target="_blank" href="https://github.com/martinabdulghni" rel="noopener noreferrer">
+                            <img src="./imgs/gityellow.png" alt="GitHub">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/moveeex" rel="noopener noreferrer">
+                            <img src="./imgs/twitteryellow.png" alt="Twitter">
+                        </a>
+                        <a target="_blank" href="mailto:me@martinabdulghni.com">
+                            <img src="./imgs/mailyellow.png" alt="Email">
+                        </a>
                     </div>
                 </div>
-                <div class='portfolio_home__title'>
-                    <div class='logo'>
-                        <img class='first'
-                            src='./imgs/martin.png'>
-                        <img class='second'
-                            src='./imgs/abdulghni.png'>
-                        <div class='page_portfolio'>
-                            <div class='portfolio_home__header'>
-                                <div class='logoMain'>
-                                    <img onclick="history.go(0)"
-                                        src='./imgs/ma.png'>
+    
+                <!-- Portfolio Title -->
+                <div class="portfolio_home__title">
+                    <div class="logo">
+                        <img class="first" src="./imgs/martin.png" alt="Martin">
+                        <img class="second" src="./imgs/abdulghni.png" alt="Abdulghni">
+                        <div class="page_portfolio">
+                            <div class="portfolio_home__header">
+                                <div class="logoMain">
+                                    <img onclick="history.go(0)" src="./imgs/ma.png" alt="MA">
                                 </div>
-                                <div class='hamburger black trigger'>
-                                    <div class='hamburger_part'></div>
-                                    <div class='hamburger_part'></div>
-                                    <div class='hamburger_part'></div>
+                                <div class="hamburger black trigger">
+                                    <div class="hamburger_part"></div>
+                                    <div class="hamburger_part"></div>
+                                    <div class="hamburger_part"></div>
                                 </div>
                             </div>
-                            <div class='slider_note'>
+                            <div class="slider_note">
                                 Drag through my work
                             </div>
-                            <div class='portfolio_home__work'>
-                                <div class='portfolio_home__header work'>
-                                    <div class='back'>
-                                        <img class='trigger'
-                                            src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowDown.png'>
-                                    </div>
-                                    <div class='logoMain'>
-                                        <img
-                                            src='./imgs/ma.png'>
-                                    </div>
-                                    <div class='hamburger white trigger'>
-                                        <div class='hamburger_part'></div>
-                                        <div class='hamburger_part'></div>
-                                        <div class='hamburger_part'></div>
-                                    </div>
-                                </div>
-                                <div class='slideClone'>
-                                    <div class='title f'>
+    
+                            <!-- Portfolio Work -->
+                            <div class="portfolio_home__work">
+                                <!-- Project Slides (Add more as needed) -->
+                                <!-- Example Slide 1 -->
+                                <div class="slideClone">
+                                    <div class="title f">
                                         .01
                                         <br>
                                         Fortnite Box
                                     </div>
-                                    <div class='image'>
-                                        <img draggable='false'
-                                            src='./imgs/fortniteboxbig.png'>
-                                        <div class='overlay'></div>
-                                        <div class='cats'>E-Commerce Project</div>
-                                        <div class='title'>Selling And Buying
-                                            Fortnite Accounts.
-                                            Revenue: 62 Tkr, (2021) <a
-                                                target="_blank" href="https://martinabdulghni.com/projects/fortnitebox">demo</a></div>
+                                    <div class="image">
+                                        <img draggable="false" src="./imgs/fortniteboxbig.png" alt="Fortnite Box">
+                                        <div class="overlay"></div>
+                                        <div class="cats">E-Commerce Project</div>
+                                        <div class="title">
+                                            Selling And Buying Fortnite Accounts. Revenue: 62 Tkr, (2021)
+                                            <a href="https://martinabdulghni.com/projects/fortnitebox" target="_blank" rel="noopener noreferrer">demo</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class='slideClone'>
-                                    <div class='title f'>
+    
+                                <!-- Example Slide 2 -->
+                                <div class="slideClone">
+                                    <div class="title f">
                                         .02
                                         <br>
                                         MOVEX.
                                     </div>
-                                    <div class='image'>
-                                        <img draggable='false'
-                                            src='./imgs/movexbig.png'>
-                                        <div class='overlay'></div>
-                                        <div class='cats'>YOUTUBE CHANNEL</div>
-                                        <div class='title'>Gaming Youtube
-                                            Channel +60k Subscribers, +4.5M
-                                            Views.</div>
+                                    <div class="image">
+                                        <img draggable="false" src="./imgs/movexbig.png" alt="MOVEX">
+                                        <div class="overlay"></div>
+                                        <div class="cats">YOUTUBE CHANNEL</div>
+                                        <div class="title">
+                                            Gaming Youtube Channel +60k Subscribers, +4.5M Views.
+                                        </div>
                                     </div>
                                 </div>
-                                <div class='slideClone'>
-                                    <div class='title f'>
+    
+                                <!-- Example Slide 3 -->
+                                <div class="slideClone">
+                                    <div class="title f">
                                         .03
                                         <br>
                                         CATTSO!
                                     </div>
-                                    <div class='image'>
-                                        <img draggable='false'
-                                            src='./imgs/cattso.png'>
-                                        <div class='overlay'></div>
-                                        <div class='cats'>ARTIFICIAL
-                                            INTELLIGENCE PROJECT</div>
-                                        <div class='title'>E-Commerce
-                                            Data Analaysis Tool.</div>
+                                    <div class="image">
+                                        <img draggable="false" src="./imgs/cattso.png" alt="CATTSO!">
+                                        <div class="overlay"></div>
+                                        <div class="cats">ARTIFICIAL INTELLIGENCE PROJECT</div>
+                                        <div class="title">E-Commerce Data Analysis Tool.</div>
                                     </div>
                                 </div>
-
+                                <!-- End of Project Slides -->
                             </div>
-                            <div class='portfolio_home__slider'>
-                                <div class='slider_inner'>
-                                    <div class='slider_inner__slide'>
-                                        <div class='title'>
+    
+                            <!-- Portfolio Slider -->
+                            <div class="portfolio_home__slider">
+                                <div class="slider_inner">
+                                    <!-- Slider Inner Slides (Add more as needed) -->
+                                    <!-- Example Slider Inner Slide 1 -->
+                                    <div class="slider_inner__slide">
+                                        <div class="title">
                                             .01
                                             <br>
                                             Fortnite Box
                                         </div>
-                                        <div class='image'>
-                                            <img draggable='false'
-                                                src='./imgs/fortnitebox.png'>
-                                            <div class='overlay'></div>
-                                            <div class='cats'>E-Commerce Project</div>
-                                            <div class='title'>Selling And
-                                                Buying Fortnite Accounts.</div>
-                                            <div class='button'>
+                                        <div class="image">
+                                            <img draggable="false" src="./imgs/fortnitebox.png" alt="Fortnite Box">
+                                            <div class="overlay"></div>
+                                            <div class="cats">E-Commerce Project</div>
+                                            <div class="title">Selling And Buying Fortnite Accounts.</div>
+                                            <div class="button">
                                                 Read More
-                                                <img
-                                                    src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png'>
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Read More">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class='slider_inner__slide'>
-                                        <div class='title'>
+                                    <!-- Example Slider Inner Slide 2 -->
+                                    <div class="slider_inner__slide">
+                                        <div class="title">
                                             .02
                                             <br>
                                             MOVEX.
                                         </div>
-                                        <div class='image'>
-                                            <img draggable='false'
-                                                src='./imgs/movex.png'>
-                                            <div class='overlay'></div>
-                                            <div class='cats'>YOUTUBE CHANNEL</div>
-                                            <div class='title'>Gaming Youtube
-                                                Channel +60k Subscribers, +4.5M
-                                                Views.</div>
-                                            <div class='button'>
+                                        <div class="image">
+                                            <img draggable="false" src="./imgs/movex.png" alt="MOVEX">
+                                            <div class="overlay"></div>
+                                            <div class="cats">YOUTUBE CHANNEL</div>
+                                            <div class="title">Gaming Youtube Channel +60k Subscribers, +4.5M Views.</div>
+                                            <div class="button">
                                                 Read More
-                                                <img
-                                                    src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png'>
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Read More">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class='slider_inner__slide'>
-                                        <div class='title'>
+                                    <!-- Example Slider Inner Slide 3 -->
+                                    <div class="slider_inner__slide">
+                                        <div class="title">
                                             .03
                                             <br>
                                             CATTSO!
                                         </div>
-                                        <div class='image'>
-                                            <img draggable='false'
-                                                src='./imgs/cattso.png'>
-                                            <div class='overlay'></div>
-                                            <div class='cats'>ARTIFICIAL
-                                                INTELLIGENCE PROJECT</div>
-                                            <div class='title'>E-Commerce
-                                                Data Analaysis Tool.</div>
-                                            <div class='button'>
+                                        <div class="image">
+                                            <img draggable="false" src="./imgs/cattso.png" alt="CATTSO!">
+                                            <div class="overlay"></div>
+                                            <div class="cats">ARTIFICIAL INTELLIGENCE PROJECT</div>
+                                            <div class="title">E-Commerce Data Analysis Tool.</div>
+                                            <div class="button">
                                                 Soon
-                                                <img
-                                                    src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png'>
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Soon">
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- End of Slider Inner Slides -->
                                 </div>
                             </div>
                         </div>
                     </div>
+    
+                    <!-- Separator Line and Header -->
                     <hr>
                     <h1>
-                        I do open source
+                        I contribute to open source
                         <span>&amp;</span>
-
                         AI. <span>:)</span>
                     </h1>
-                    <img class='trigger'
-                        src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowDown.png'>
+                    <img class="trigger" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowDown.png" alt="Scroll Down">
                 </div>
             </div>
         </div>
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+        <!-- JavaScript and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./script/script.js"></script>
     </body>
+    
 </html>
