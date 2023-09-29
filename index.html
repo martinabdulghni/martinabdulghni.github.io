@@ -52,6 +52,9 @@
     <meta name="twitter:description" content="Explore the projects and expertise of Martin Abdulghni, a seasoned Full-Stack Developer." />
     <meta name="twitter:image" content="https://martinabdulghni.com/imgs/martin-abdulghni-twitter.jpg" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
     <!-- Facebook App ID -->
     <meta property="fb:app_id" content="509379787696211" />
 
@@ -60,7 +63,7 @@
     <meta http-equiv="Content-Language" content="en" />
 
     <!-- Stylesheets and Favicon -->
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/projects.css" />
     <link rel="icon" type="image/x-icon" href="https://martinabdulghni.com/imgs/icon.png" />
   </head>
   <script>
@@ -73,185 +76,191 @@
   </script>
 
   <body>
-    <!-- Cursor -->
-    <div class="cursor">
-      <div class="cursor_point"></div>
-      <div class="cursor_outer"></div>
-    </div>
+    <svg id="icons" class="hide">
+      <symbol id="arrow" viewBox="0 0 451.846 451.847">
+        <path
+          fill="#FFF"
+          d="M345.44 248.292l-194.286 194.28c-12.36 12.366-32.397 12.366-44.75 0-12.354-12.353-12.354-32.39 0-44.743l171.914-171.91-171.91-171.905c-12.353-12.36-12.353-32.394 0-44.748 12.355-12.36 32.392-12.36 44.75 0L345.446 203.55c6.177 6.18 9.262 14.27 9.262 22.367 0 8.098-3.09 16.195-9.267 22.372z"
+        />
+      </symbol>
+    </svg>
 
-    <!-- Portfolio Section -->
-    <div class="portfolio">
-      <div class="portfolio_home">
-        <div style="position: fixed; z-index: -99; width: 2320px; height: 180%; left: 0; top: -38%"></div>
-
-        <!-- Header -->
-        <div class="portfolio_home__header">
-          <div class="hamburger trigger">
-            <a target="_blank" href="https://www.linkedin.com/in/martinabdulghni/" rel="noopener noreferrer">
-              <img src="./imgs/inyellow.png" alt="LinkedIn" />
-            </a>
-            <a target="_blank" href="https://github.com/martinabdulghni" rel="noopener noreferrer">
-              <img src="./imgs/gityellow.png" alt="GitHub" />
-            </a>
-            <a target="_blank" href="https://twitter.com/moveeex" rel="noopener noreferrer">
-              <img src="./imgs/twitteryellow.png" alt="Twitter" />
-            </a>
-            <a target="_blank" href="mailto:me@martinabdulghni.com">
-              <img src="./imgs/mailyellow.png" alt="Email" />
-            </a>
+    <div class="slider-content" id="slider">
+      <div class="header-wrapper">
+        <div class="header">
+          <div class="logo-wrapper">
+            <div class="logo"><span>TOP </span>PROJECTS :)</div>
           </div>
+          <div class="shop-wrapper"></div>
         </div>
+      </div>
 
-        <!-- Portfolio Title -->
-        <div class="portfolio_home__title">
-          <div class="logo">
-            <img class="first" src="./imgs/martin.png" alt="Martin" />
-            <img class="second" src="./imgs/abdulghni.png" alt="Abdulghni" />
-            <div class="page_portfolio">
-              <div class="portfolio_home__header">
-                <div class="logoMain">
-                  <img onclick="history.go(0)" src="./imgs/ma.png" alt="MA" />
-                </div>
-                <div class="hamburger black trigger">
-                  <div class="hamburger_part"></div>
-                  <div class="hamburger_part"></div>
-                  <div class="hamburger_part"></div>
+      <div class="slider-wrapper">
+        <div class="slider-container">
+          <div class="control-nav">
+            <ul></ul>
+          </div>
+          <div class="nav-wrapper">
+            <div class="next">
+              <div class="next-button">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="slide active" data-order="3" data-color="#ff384b" data-name="red">
+            <div class="slide-content">
+              <div class="clip-svg">
+                <img class="" src="./imgs/Box_firstSlideProject.png" alt="" />
+              </div>
+              <div class="title-wrapper">
+                <h1>- Fortnite Box.</h1>
+                <h2>Selling & Buying Fortnite Accounts</h2>
+                <div class="next-color">
+                  <span><a href="./projects/fortnitebox/">E-commerce</a></span>
+                  <span class="color">2019-2021</span>
                 </div>
               </div>
-              <div class="slider_note">Drag through my work</div>
-
-              <!-- Portfolio Work -->
-              <div class="portfolio_home__work">
-                <!-- Project Slides (Add more as needed) -->
-                <!-- Example Slide 1 -->
-                <div class="slideClone">
-                  <div class="title f">
-                    .01
-                    <br />
-                    Fortnite Box
-                  </div>
-                  <div class="image">
-                    <img draggable="false" src="./imgs/fortniteboxbig.png" alt="Fortnite Box" />
-                    <div class="overlay"></div>
-                    <div class="cats">E-Commerce Project</div>
-                    <div class="title">
-                      Selling And Buying Fortnite Accounts. Revenue: 62 Tkr, (2021)
-                      <a href="https://martinabdulghni.com/projects/fortnitebox" target="_blank" rel="noopener noreferrer">demo</a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Example Slide 2 -->
-                <div class="slideClone">
-                  <div class="title f">
-                    .02
-                    <br />
-                    MOVEX.
-                  </div>
-                  <div class="image">
-                    <img draggable="false" src="./imgs/movexbig.png" alt="MOVEX" />
-                    <div class="overlay"></div>
-                    <div class="cats">YOUTUBE CHANNEL</div>
-                    <div class="title">Gaming Youtube Channel +60k Subscribers, +4.5M Views.</div>
-                  </div>
-                </div>
-
-                <!-- Example Slide 3 -->
-                <div class="slideClone">
-                  <div class="title f">
-                    .03
-                    <br />
-                    CATTSO!
-                  </div>
-                  <div class="image">
-                    <img draggable="false" src="./imgs/cattso.png" alt="CATTSO!" />
-                    <div class="overlay"></div>
-                    <div class="cats">ARTIFICIAL INTELLIGENCE PROJECT</div>
-                    <div class="title">E-Commerce Data Analysis Tool.</div>
-                  </div>
-                </div>
-                <!-- End of Project Slides -->
-              </div>
-
-              <!-- Portfolio Slider -->
-              <div class="portfolio_home__slider">
-                <div class="slider_inner">
-                  <!-- Slider Inner Slides (Add more as needed) -->
-                  <!-- Example Slider Inner Slide 1 -->
-                  <div class="slider_inner__slide">
-                    <div class="title">
-                      .01
-                      <br />
-                      Fortnite Box
-                    </div>
-                    <div class="image">
-                      <img draggable="false" src="./imgs/fortnitebox.png" alt="Fortnite Box" />
-                      <div class="overlay"></div>
-                      <div class="cats">E-Commerce Project</div>
-                      <div class="title">Selling And Buying Fortnite Accounts.</div>
-                      <div class="button">
-                        Read More
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Read More" />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Example Slider Inner Slide 2 -->
-                  <div class="slider_inner__slide">
-                    <div class="title">
-                      .02
-                      <br />
-                      MOVEX.
-                    </div>
-                    <div class="image">
-                      <img draggable="false" src="./imgs/movex.png" alt="MOVEX" />
-                      <div class="overlay"></div>
-                      <div class="cats">YOUTUBE CHANNEL</div>
-                      <div class="title">Gaming Youtube Channel +60k Subscribers, +4.5M Views.</div>
-                      <div class="button">
-                        Read More
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Read More" />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Example Slider Inner Slide 3 -->
-                  <div class="slider_inner__slide">
-                    <div class="title">
-                      .03
-                      <br />
-                      CATTSO!
-                    </div>
-                    <div class="image">
-                      <img draggable="false" src="./imgs/cattso.png" alt="CATTSO!" />
-                      <div class="overlay"></div>
-                      <div class="cats">ARTIFICIAL INTELLIGENCE PROJECT</div>
-                      <div class="title">E-Commerce Data Analysis Tool.</div>
-                      <div class="button">
-                        Soon
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowbblakc.png" alt="Soon" />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End of Slider Inner Slides -->
-                </div>
+              <div class="footer-wrapper">
+                <ul>
+                  <li><a href="./projects/fortnitebox/">Demo ↗</a></li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Separator Line and Header -->
-          <hr />
-          <h1>
-            I contribute to open source
-            <span>&amp;</span>
-            AI. <span>:)</span>
-          </h1>
-          <img class="trigger" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/arrowDown.png" alt="Scroll Down" />
+          <div class="slide" data-order="2" data-color="#f59600" data-name="orange">
+            <div class="slide-content">
+              <div class="clip-svg">
+                <img class="" src="./imgs/movex_secSlideProject.png" alt="" />
+              </div>
+              <div class="title-wrapper">
+                <h1>- Catso.</h1>
+                <h2>E-Commerce Data Analysis Tool.</h2>
+                <div class="next-color">
+                  <span><a href="https://www.catso.io/catso/sv-SE/">E-commerce</a></span>
+                  <span class="color">2019-2021</span>
+                </div>
+              </div>
+              <div class="footer-wrapper">
+                <ul>
+                  <li><a href="https://www.catso.io/catso/sv-SE/">Website ↗</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-order="1" data-color="#0028f2" data-name="blue">
+            <div class="slide-content">
+              <div class="clip-svg">
+                <img class="" src="./imgs/movex_thirdSlideProject.png" alt="" />
+              </div>
+              <div class="title-wrapper">
+                <h1>- Movex</h1>
+                <h2>+50K subscribers & +4M Views.</h2>
+                <div class="next-color">
+                  <span><a href="https://www.youtube.com/c/IxM7MD">YT-Channel</a></span>
+                  <span class="color">2015-2021</span>
+                </div>
+              </div>
+              <div class="footer-wrapper">
+                <ul>
+                  <li><a href="https://www.youtube.com/c/IxM7MD">Youtube ↗</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- JavaScript and jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./script/script.js"></script>
+    <main class="page-content">
+      <div class="card">
+        <div class="content">
+          <h2 class="title">2019</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">2023</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">2023</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">2022</h2>
+        </div>
+      </div>
+    </main>
+
+    <div class="background-container">
+      <div class="wrapper">
+        <!-- OVERLAY
+      =============================== -->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <!-- NAVBAR 
+      =============================== -->
+        <div class="navbar">
+          <div class="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <div class="lang">
+            <span>Martin</span>
+            <br />
+            <span>Abdulghni</span>
+          </div>
+          <div class="search">
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </div>
+
+        <!-- SOCIAL MEDIA 
+      =============================== -->
+        <div class="media">
+          <ul>
+            <li>facebook</li>
+            <li><a href="https://google.se">instagram</a></li>
+            <li>twitter</li>
+          </ul>
+        </div>
+
+        <!-- TEXT 
+      =============================== -->
+        <div class="text">
+          <h1><span class="hide--text">MaRTIN %</span></h1>
+          <h2>21 yo.</h2>
+          <h3>
+            <span class="hide--text">Dev & <br />design.</span>
+          </h3>
+          <p>
+            <span class="hide--text">
+              Martin is a seasoned full-stack developer and designer boasting more than 5 years of expertise. Currently, he is immersed in
+              the realm of Applied AI, while actively contributing as a system developer at Navcite. Martin's qualifications include
+              Microsoft certifications and hands-on experience in ERP systems like Business Central 365 and Infor M3.
+            </span>
+          </p>
+        </div>
+
+        <!-- SPONSOR 
+      =============================== -->
+        <div class="sponsor">
+          <p>Luleå</p>
+        </div>
+
+        <!-- DISTORTION 
+      =============================== -->
+        <div class="distortion"></div>
+      </div>
+    </div>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-862199161"></script>
     <script>
@@ -263,5 +272,6 @@
 
       gtag("config", "AW-862199161");
     </script>
+    <script src="./script/projects.js"></script>
   </body>
 </html>
