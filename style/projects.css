@@ -123,6 +123,7 @@ html {
   box-shadow: 0 0 35px 20px rgba(79, 69, 66, 0.2);
   margin-bottom: 40px;
   margin-top: 40px;
+  border-radius: 40px;
 }
 .slider-content .slider-container {
   position: relative;
@@ -303,6 +304,7 @@ svg.mask {
   max-width: 1024px;
   min-width: 480px;
   overflow: hidden;
+  border-radius: 40px;
 }
 @media (min-width: 200px) {
   .page-content {
