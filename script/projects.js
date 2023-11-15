@@ -240,14 +240,14 @@ gsap.from(".slider-content", {
   duration: 0.5,
   stagger: 0.2,
   delay: 3.5,
-  left: "-100%",
+  right: "-140%",
   ease: "expo.inOut",
 });
 gsap.from(".card", {
   duration: 1.5,
   stagger: 0.2,
   delay: 4,
-  bottom: "-100%",
+  bottom: "-200%",
   ease: "expo.inOut",
 });
 gsap.from("#banner", {
