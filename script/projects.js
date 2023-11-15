@@ -1,3 +1,10 @@
+var hero = $(".hero");
+var hero = $(".overlayx");
+setTimeout(function () {
+  hero.addClass("hero-overlay");
+  hero.addClass("hero-black");
+}, 1500);
+
 var mySlider = {
   config: {
     slider: ".slider-content",
@@ -236,6 +243,13 @@ gsap.to(".third", {
   ease: "expo.inOut",
 });
 
+gsap.from(".hero", {
+  duration: 0.5,
+  stagger: 0.2,
+  delay: 3.5,
+  right: "-140%",
+  ease: "expo.inOut",
+});
 gsap.from(".slider-content", {
   duration: 0.5,
   stagger: 0.2,

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Hurme";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff") format("woff");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff2") format("woff2"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -484,10 +485,6 @@ body .portfolio_home__header .hamburger.black {
   opacity: 1 !important;
 }
 
-
-
-
-
 body .portfolio_home__title {
   position: absolute;
   bottom: 80px;
@@ -523,7 +520,6 @@ body .portfolio_home__title .logo img.second {
   -webkit-clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
   clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
 }
-
 
 body .portfolio_home__title hr {
   width: 80px;
@@ -592,7 +588,8 @@ body .portfolio_home__title .page_portfolio {
   clip-path: polygon(226px calc(100% - 262px), 359px calc(100% - 262px), 359px calc(100% - 309px), 226px calc(100% - 309px));
   transition: opacity 0.6s 0.2s, -webkit-clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99);
   transition: opacity 0.6s 0.2s, clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99);
-  transition: opacity 0.6s 0.2s, clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99), -webkit-clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99);
+  transition: opacity 0.6s 0.2s, clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99),
+    -webkit-clip-path 1s 0.6s cubic-bezier(0.79, -0.01, 0, 0.99);
 }
 
 @-webkit-keyframes sliderIn {
@@ -760,7 +757,6 @@ body .portfolio_home__title .page_portfolio {
   bottom: 73px !important;
   position: absolute;
 }
-
 
 .title a:link,
 .title a:visited {
