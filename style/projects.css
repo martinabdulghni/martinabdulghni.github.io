@@ -1,5 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat";
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind&display=swap");
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -7,6 +9,15 @@
   --font-serif: "Cardo", serif;
 }
 .hide {
+  display: none;
+}
+
+.max-body {
+  max-height: 100%;
+  overflow-y: hidden;
+}
+
+.unloaded {
   display: none;
 }
 
@@ -20,11 +31,11 @@ body,
 html {
   margin: 0px;
   background: transparent;
-  font-size: 6px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
   background-color: #2f2f2f;
+  overflow-x: hidden;
 }
 
 /* NAVBAR 
@@ -70,14 +81,14 @@ html {
 
 /* TEXT 
 =============================== */
-.text {
+.wrapper .text {
   position: absolute;
-  top: 200px;
+  top: 40%;
   left: 100px;
   transform: rotate(-90deg);
   color: rgb(230, 230, 230);
 }
-.text h1 {
+.wrapper .text h1 {
   font-size: 120px;
   text-transform: uppercase;
   font-weight: 900;
@@ -87,10 +98,10 @@ html {
   height: 150px;
   width: 600px;
 }
-.text h1 .hide--text {
+.wrapper .text h1 .hide--text {
   position: absolute;
 }
-.text h2 {
+.wrapper .text h2 {
   content: "duality";
   position: absolute;
   top: 40px;
@@ -100,7 +111,7 @@ html {
   font-size: 150px;
   opacity: 1;
 }
-.text h3 {
+.wrapper .text h3 {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
@@ -109,10 +120,10 @@ html {
   overflow: hidden;
   height: 80px;
 }
-.text h3 .hide--text {
+.wrapper .text h3 .hide--text {
   position: absolute;
 }
-.text p {
+.wrapper .text p {
   width: 400px;
   font-size: 12px;
   margin-top: 30px;
@@ -121,7 +132,7 @@ html {
   overflow: hidden;
   height: 100px;
 }
-.text p .hide--text {
+.wrapper .text p .hide--text {
   position: absolute;
 }
 
@@ -187,6 +198,7 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity here */
+  /* background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2)); */
 }
 
 .hero-overlay {
@@ -233,7 +245,6 @@ html {
   outline: none;
 }
 
-
 @media screen and (max-width: 480px) {
   .social-panel-container.visible {
     transform: translateX(0px);
@@ -242,4 +253,460 @@ html {
   .floating-btn {
     right: 10px;
   }
+}
+
+#slider {
+  width: 600px;
+  display: flex;
+  gap: 15px;
+  font-size: 30px;
+}
+
+#sliderValue {
+  display: flex;
+  color: #0077ee;
+  font-weight: 700;
+}
+
+.start {
+  opacity: 0;
+}
+
+.animation {
+  animation: fade 0.3s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.holder-animation {
+  animation: holder 4s;
+}
+
+@keyframes holder {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wrapper {
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.cards-container:hover .clash-card {
+  opacity: 0.6;
+}
+.cards-container .clash-card:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
+
+.clash-card {
+  background: rgba(0, 0, 0, 0.499);
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Hind", sans-serif;
+  transform: perspective(800px) rotateY(6deg);
+  transition: 0.5s;
+}
+
+.clash-card:hover {
+  cursor: pointer;
+  scale: 1.01;
+}
+.clash-card__image:hover {
+  border: none;
+  box-shadow: none;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+}
+
+.clash-card__image--barbarian {
+  background: url("../imgs/cattso.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clash-card__image--barbarian img {
+  width: 400px;
+  position: absolute;
+  top: -65px;
+  left: -70px;
+}
+
+.clash-card__image--archer {
+  background: url("../imgs/fortnitebox.png");
+  background-size: cover;
+  background-position: center;
+}
+.clash-card__image--archer img {
+  width: 400px;
+  position: absolute;
+  top: -34px;
+  left: -37px;
+}
+
+.clash-card__image--giant {
+  background: url("../imgs/movexbig.png");
+  background-size: cover;
+  background-position: center;
+}
+.clash-card__image--giant img {
+  width: 340px;
+  position: absolute;
+  top: -30px;
+  left: -25px;
+}
+.clash-card__image-current-work {
+  background: url("https://www.navcite.com/wp-content/uploads/2020/04/Berg07.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.clash-card__image-current-work img {
+  width: 340px;
+  position: absolute;
+  top: -30px;
+  left: -25px;
+}
+
+.clash-card__image--goblin {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--goblin img {
+  width: 370px;
+  position: absolute;
+  top: -21px;
+  left: -37px;
+}
+
+.clash-card__image--wizard {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+.clash-card__image--wizard img {
+  width: 345px;
+  position: absolute;
+  top: -28px;
+  left: -10px;
+}
+
+.clash-card__level {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: #ec3b3b;
+}
+
+.clash-card__level--archer {
+  color: #eec254;
+}
+
+.clash-card__level--giant {
+  color: #5d2d82;
+}
+.clash-card__level-current-work {
+  color: #2837a9;
+}
+
+.clash-card__level--goblin {
+  color: #82bb30;
+}
+
+.clash-card__level--wizard {
+  color: #4facff;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+  min-height: 150px;
+}
+
+.clash-card__unit-stats--barbarian {
+  background: #ec3b3b30;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 1px solid #c43131;
+}
+
+.clash-card__unit-stats--archer {
+  background: #eec25430;
+}
+.clash-card__unit-stats--archer .one-third {
+  border-right: 1px solid #c9a445;
+}
+
+.clash-card__unit-stats--giant {
+  background: #a426b230;
+}
+.clash-card__unit-stats-current-work {
+  background: #2837a930;
+}
+.clash-card__unit-stats--giant .one-third {
+  border-right: 1px solid #410647;
+}
+.clash-card__unit-stats-current-work .one-third {
+  border-right: 1px solid #1c2777;
+}
+
+.clash-card__unit-stats--goblin {
+  background: #82bb30;
+}
+.clash-card__unit-stats--goblin .one-third {
+  border-right: 1px solid #71a32a;
+}
+
+.clash-card__unit-stats--wizard {
+  background: #4facff;
+}
+.clash-card__unit-stats--wizard .one-third {
+  border-right: 1px solid #309eff;
+}
+
+.clash-card__unit-stats {
+  color: rgb(217, 217, 217);
+  font-weight: 700;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+.parallax-four {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1526488807855-309186804587?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D");
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  backdrop-filter: blur(8px);
+}
+.parallax-two {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNb5zIWsDm9KP_MBAq5a3FyAdDXCCqswYfA&usqp=CAU");
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  backdrop-filter: blur(8px);
+}
+
+@media screen and (max-width: 1060px) {
+  .media {
+    display: none;
+  }
+  .text h3 .hide--text {
+    display: none;
+  }
+  .distortion {
+    display: none;
+  }
+  .text {
+    height: 50%;
+    width: 100vw;
+    position: absolute;
+    top: 30%;
+  }
+  .text h2 {
+    top: 100px;
+    color: rgb(164, 164, 164);
+  }
+
+  .text h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -10px;
+    width: 600px;
+    top: 40px;
+  }
+  .clash-card {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.posts-entry-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 0.05rem;
+}
+.read-more {
+  border-bottom: 2px solid #214252;
+}
+.retro-layout-alt .img-1 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.retro-layout-alt .hentry {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.retro-layout-alt .gradient {
+  position: relative;
+}
+.retro-layout-alt .gradient:before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    color-stop(18%, transparent),
+    color-stop(99%, rgba(0, 0, 0, 0.8)),
+    to(rgba(0, 0, 0, 0.8))
+  );
+  background: -o-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+}
+.retro-layout-alt .hentry .featured-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 200ms;
+}
+.retro-layout-alt .text {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  padding: 20px;
+  max-width: 350px;
+}
+.retro-layout-alt .text span {
+  color: rgba(255, 255, 255, 0.7);
+}
+.retro-layout-alt .text h2,
+.retro-layout-alt .text .h2 {
+  color: #fff;
+  font-size: 26px;
+}
+.retro-layout-alt .v-height {
+  height: 300px;
+}
+.retro-layout-alt .mb30 {
+  margin-bottom: 30px;
+}
+.retro-layout-alt .text.text-sm h2,
+.retro-layout-alt .text.text-sm .h2 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.retro-layout-alt .two-col > a {
+  width: calc(50% - 15px);
+  float: left;
+}
+
+.retro-layout-alt .v-height {
+  height: 300px;
+}
+@media (max-width: 767.98px) {
+  .retro-layout-alt .img-1 {
+    height: 240px !important;
+    position: relative;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  .retro-layout-alt .two-col > a {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 30px;
+  }
+}
+
+.hentry:hover img {
+  scale: 1.1;
 }
